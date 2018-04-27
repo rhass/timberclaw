@@ -1,5 +1,7 @@
 # timberclaw
 
+[![Build Status](https://travis-ci.org/rhass/timberclaw.svg)](https://travis-ci.org/rhass/timberclaw)
+
 Timberclaw is a log grabber with the goal of high concurrency and fast retrieval.
 
 ## Usage
@@ -22,4 +24,4 @@ Nothing to use at this time.
 
 ## Contributors
 
-- [[rhass]](https://github.com/[your-github-name]) Ryan Hass - creator, maintainer
+- [[rhass]](https://github.com/rhass) Ryan Hass - creator, maintainer
