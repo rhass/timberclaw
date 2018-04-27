@@ -1,0 +1,14 @@
+version: 1.0
+shards:
+  awscr-s3:
+    github: taylorfinnell/awscr-s3
+    version: 0.3.1
+
+  awscr-signer:
+    github: taylorfinnell/awscr-signer
+    version: 0.5.0
+
+  docopt:
+    github: chenkovsky/docopt.cr
+    commit: 174a57e5e8363c0a8e834e98bd7b5450b1c4dcb2
+

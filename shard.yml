@@ -1,0 +1,19 @@
+name: timberclaw
+version: 0.1.0
+
+authors:
+  - Ryan Hass <rhass@users.noreply.github.com>
+
+targets:
+  timberclaw:
+    main: src/timberclaw.cr
+
+dependencies:
+  awscr-s3:
+    github: taylorfinnell/awscr-s3
+  docopt:
+    github: chenkovsky/docopt.cr
+
+crystal: 0.24.2
+
+license: MIT

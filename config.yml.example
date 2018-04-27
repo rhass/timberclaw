@@ -1,0 +1,5 @@
+logs:
+  - name: DPMR209CD.COUNTY.ROL12MON
+    description: Rolling CSV log of Los Angeles County Building Permits for the last 12 months.
+    url: http://dpw.lacounty.gov/bsd/rds/reports/countypermits/DPMR209CD.COUNTY.ROL12MON.TXT
+    rolling: true
