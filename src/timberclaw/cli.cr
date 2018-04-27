@@ -34,13 +34,14 @@ module Timberclaw
     Usage:
       #{@@exec_name} init
       #{@@exec_name} grab
+      #{@@exec_name} --config=<file.yml>
       #{@@exec_name} -d | --debug
       #{@@exec_name} -h | --help
       #{@@exec_name} --version
 
     Options:
-      --config=<config.yml>    Use specified config file. [Default: #{Timberclaw::Config.default_config_file}]
-      --version       Show version.
+      --config=<file.yml>   Use specified config file. [Default: #{Timberclaw::Config.default_config_file}]
+      --version             Show version.
     DOCOPT
 
     getter opts
@@ -50,13 +51,11 @@ module Timberclaw
     end
 
     def run
-      # BROKEN: I haven't figure out how to use the --arg=value docopt feature in Crystal-Lang yet.
-      #
-      # config =  if @opts["--config"]
-      #             Timberclaw::Config.new(@opts["--config"])
-      #           else
-      #             Timberclaw::Config.new
-      #           end
+      config =  if @opts["--config"]
+                  Timberclaw::Config.new(@opts["--config"])
+                else
+                  Timberclaw::Config.new
+                end
 
       if @opts["--version"]
         version
