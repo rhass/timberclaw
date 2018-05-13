@@ -40,7 +40,7 @@ module Timberclaw
       #{@@exec_name} --version
 
     Options:
-      --config=<file.yml>   Use specified config file. [Default: #{Timberclaw::Config.default_config_file}]
+      --config=<file.yml>   Use specified config file.
       --version             Show version.
     DOCOPT
 
@@ -51,11 +51,10 @@ module Timberclaw
     end
 
     def run
-      config =  if @opts["--config"]
-                  Timberclaw::Config.new(@opts["--config"])
-                else
-                  Timberclaw::Config.new
-                end
+      config = Timberclaw::Config.new
+      config.file = opts["--config"] if @opts["--config"]
+
+      #pp "****** Config: #{config}"
 
       if @opts["--version"]
         version

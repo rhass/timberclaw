@@ -26,17 +26,17 @@ require "yaml"
 module Timberclaw
   class Config
     getter config : YAML::Any
-    getter file : String
+    setter file : String
 
     def initialize(@file : String = default_config_file)
       @config = load_config
     end
 
-    def self.default_config_file : String
+    def default_config_file # : String
       File.expand_path("~/.timberclaw/config.yml")
     end
 
-    private def load_config
+    private def load_config : YAML::Any
       if File.exists?(@file) && File.readable?(@file)
         puts "Loading config file #{@file}..."
         YAML.parse(File.read(@file))
